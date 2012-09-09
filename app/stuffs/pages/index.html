@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <title>TinyServer Test Page</title>
+    <link href="/stuffs/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/stuffs/css/bootstrap-responsive.css" rel="stylesheet">
+	<style type="text/css">
+		body {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+	</style>
+  </head>
+  <body>
+	
+	<div class="container">
+		
+		<div class="hero-unit">
+    		<h1>Hello, world!</h1>
+		</div>
+		
+		<p align="center"><img src="/stuffs/images/logo.jpg"></p>
+		
+		<div class="row">
+			<div class="span4">
+				<h2>Hi, how are you?</h2>
+		          	<p>I'm just a testing page... don't ask me anymore!</p>
+					<p>
+						<h3>We use:</h3>
+						<p align="center"><img src="/stuffs/images/flask.png" id="partner"></p>
+					</p>
+			</div>
+			<div class="span4">
+				<h2>Test me how I call a controller</h2>
+				<p>Ooooh beby... Just click this...<br></p>
+				<p align="center"><a class="btn btn-danger" href="/read/plain">Click me!</a></p>
+			</div>
+			<div class="span4">
+				<h2>Test me how I read your post data</h2>
+				<form action="/read/post" method="post" class="form-inline">
+                        	<input type="text" name="var" placeholder="insert a text" id="var"> 
+				<button type="submit" class="btn">Send me!</button>
+				</form>
+			</div>
+                </form>
+		</div>
+	
+		<hr>
+      
+		
+		<footer>
+		        <p>&copy; Pasquale Boemio 2012</p>
+		</footer>
+	</div>
+	<script src="/stuffs/javascript/jquery.js"></script>
+	<script src="/stuffs/javascript/bootstrap.min.js"></script>
+	<script>
+	var images = new Array(),
+	x = 0;
+
+	images[0] = "/stuffs/images/bootstrap.jpg";
+	images[1] = "/stuffs/images/jinja.png";
+	images[2] = "/stuffs/images/jquery.png";
+	images[3] = "/stuffs/images/python.png";
+	changeImage();
+	
+	function changeImage() {
+		if(x >= images.length){
+	        x = 0;
+	    }
+	
+	    var img = document.getElementById("partner");
+	    img.src = images[x];
+	    x++;
+
+	    setTimeout("changeImage()", 3000);
+	}
+	</script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+wsgi.multiprocess: False
+SERVER_PROTOCOL: HTTP/1.1
+VERSIONER_PYTHON_PREFER_32_BIT: no
+SERVER_SOFTWARE: WSGIServer/0.1 Python/2.7.1
+LC_CTYPE: UTF-8
+TERM_PROGRAM_VERSION: 303.2
+REQUEST_METHOD: GET
+LOGNAME: pau
+USER: pau
+PATH: /opt/local/bin:/opt/local/sbin:/opt/TexLive/bin/universal-darwin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+QUERY_STRING: 
+HOME: /Users/pau
+DISPLAY: /tmp/launch-dwjFTU/org.x:0
+TERM_PROGRAM: Apple_Terminal
+CONTENT_LENGTH: 
+HTTP_ACCEPT_CHARSET: ISO-8859-1,utf-8;q=0.7,*;q=0.3
+TERM: xterm-256color
+SHELL: /bin/bash
+HTTP_CONNECTION: keep-alive
+SERVER_NAME: whitenoise.pausnet.home.it
+VERSIONER_PYTHON_VERSION: 2.7
+SHLVL: 1
+wsgi.url_scheme: http
+_: /usr/bin/python
+SERVER_PORT: 5000
+PATH_INFO: /
+TERM_SESSION_ID: 2849DBD1-6BE1-42D5-9193-DACF77379D65
+SSH_AUTH_SOCK: /tmp/launch-xeDE0n/Listeners
+wsgi.input: <socket._fileobject object at 0x104fe1550>
+Apple_PubSub_Socket_Render: /tmp/launch-L3OBZ1/Render
+HTTP_HOST: localhost:5000
+SCRIPT_NAME: 
+wsgi.multithread: True
+HTTP_CACHE_CONTROL: max-age=0
+TMPDIR: /var/folders/yv/fy3pm1q15bqcln4bdpv9tx1h0000gn/T/
+HTTP_ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+wsgi.version: (1, 0)
+HTTP_USER_AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1
+GATEWAY_INTERFACE: CGI/1.1
+wsgi.run_once: False
+OLDPWD: /Users/pau/Develop
+REMOTE_ADDR: 127.0.0.1
+HTTP_ACCEPT_LANGUAGE: en-US,en;q=0.8
+wsgi.errors: <open file '<stderr>', mode 'w' at 0x104eff270>
+__CF_USER_TEXT_ENCODING: 0x1F5:0:0
+Apple_Ubiquity_Message: /tmp/launch-YnZfk1/Apple_Ubiquity_Message
+PWD: /Users/pau/Develop/ImapNotes/Server
+CONTENT_TYPE: text/plain
+wsgi.file_wrapper: wsgiref.util.FileWrapper
+REMOTE_HOST: 1.0.0.127.in-addr.arpa
+HTTP_ACCEPT_ENCODING: gzip,deflate,sdch
+COMMAND_MODE: unix2003
