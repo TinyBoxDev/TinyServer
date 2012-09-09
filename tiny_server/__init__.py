@@ -20,7 +20,9 @@ class Constants(object):
 	# Request constants
 	HTTP_METHOD = 'REQUEST_METHOD';
 	HTTP_METHOD_GET = 'GET';
+	HTTP_METHOD_POST = 'POST';
 	HTTP_REQUEST_ADDRESS = 'PATH_INFO';
+	GET_REQUEST_CONTENT = 'QUERY_STRING';
 	REQUESTED_FUNCTION = 0;
 	REQUESTED_ACTION = 1;
 	REQUESTED_ITEM_TYPE = 1;
@@ -33,6 +35,9 @@ class Constants(object):
 	# Folders
 	ROOT_FOLDER = None;
 	STUFFS_FOLDER = None;
+	CONTROLLERS_FOLDER = None;
+	MODELS_FOLDER = None;
+	VIEWS_FOLDER = None;
 	# Default Items
 	ERROR_PAGE = 'pages/errorpage.html';
 	HOME_PAGE = 'pages/index.html';
@@ -41,6 +46,10 @@ class Constants(object):
 	def setFolders(rootFolder):
 		Constants.ROOT_FOLDER = rootFolder + '/app/';
 		Constants.STUFFS_FOLDER = Constants.ROOT_FOLDER + 'stuffs/';
+		Constants.CONTROLLERS_FOLDER = Constants.ROOT_FOLDER + 'controllers/';
+		Constants.MODELS_FOLDER = Constants.ROOT_FOLDER + 'models/';
+		Constants.VIEWS_FOLDER = Constants.ROOT_FOLDER + 'views/';
+		
 
 def logMessage(message, additional='', indent=0):
 	indentation = '\n=';

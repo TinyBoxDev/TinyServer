@@ -11,6 +11,7 @@ import os;
 from wsgiref.simple_server import make_server;
 from tiny_server import Constants, logMessage, BadRequestException;
 from mimetypes import guess_type;
+from urlparse import parse_qs;
 
 def _route(environ, start_response):
 	try:
@@ -23,7 +24,7 @@ def _route(environ, start_response):
 		# Active request
 		elif len(calledItem)==2 and calledItem[Constants.REQUESTED_FUNCTION]!='' and calledItem[Constants.REQUESTED_ACTION]!='': 
 			logMessage('Recognized an active request');
-			status, headers, view = _executeAction(calledItem[Constants.REQUESTED_FUNCTION], calledItem[Constants.REQUESTED_ACTION], environ[Constants.HTTP_METHOD]);
+			status, headers, view = _executeAction(calledItem[Constants.REQUESTED_FUNCTION], calledItem[Constants.REQUESTED_ACTION], environ);
 		# Requesting home page
 		elif calledItem[Constants.REQUESTED_FUNCTION] == '':
 			logMessage('Let\'s go to the homepage!' );
@@ -55,7 +56,13 @@ def _provideAResource(itemLocation):
 	
 	return status, headers, objectLoaded;
 
-def _executeAction(function, action, method, vars=None):
+def _executeAction(function, action, session):
+	method = session[Constants.HTTP_METHOD];
+	if method == Constants.HTTP_METHOD_GET:
+		vars = parse_qs(session[Constants.GET_REQUEST_CONTENT]);
+	else:
+		raise BadRequestException('Wrong method provided!');
+			
 	return Constants.STATUS_OK, [('Content-type', 'text/plain')], 'Method: ' + method + ' - Executing ' + function + "." + action + '(' + str(vars) + ')';
 
 if __name__ == "__main__":

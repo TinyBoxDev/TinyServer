@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <title>TinyServer Test Page</title>
+    <link href="/stuffs/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/stuffs/css/bootstrap-responsive.css" rel="stylesheet">
+	<style type="text/css">
+		body {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+	</style>
+  </head>
+  <body>
+	
+	<div class="container">
+		
+		<div class="hero-unit">
+    		<h1>Login</h1>
+		</div>
+	
+		<div class="row" align="center">
+			<div class="span12" >
+				<form action="/test/login" method="post">
+					<label>Username:</label>
+					<input type="text" id="username" name="username" placeholder="your username">
+					<label>Password:</label>
+					<input type="password" id="pass" name="pass" placeholder="your password">
+					<span class="help-block">Insert here your credentials</span>
+					<button type="submit" class="btn">Submit</button>
+				</form>
+			</div>
+		</div>
+		
+		<hr>
+      
+		
+		<footer>
+		        <p>&copy; Pasquale Boemio 2012</p>
+		</footer>
+	</div>
+	<script src="/stuffs/javascript/jquery.js"></script>
+	<script src="/stuffs/javascript/bootstrap.min.js"></script>
+  </body>
+</html>
