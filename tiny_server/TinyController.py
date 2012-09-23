@@ -11,8 +11,11 @@ import unittest
 
 
 class TinyController:
-	def __init__(self):
-		pass
+	
+	data_bundle;
+	
+	def __init__(self, vars):
+		self.data_bundle = vars;
 
 
 class TinyControllerTests(unittest.TestCase):

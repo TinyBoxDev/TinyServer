@@ -11,7 +11,7 @@ import os;
 from wsgiref.simple_server import make_server;
 from tiny_server import Constants, logMessage, BadRequestException;
 from mimetypes import guess_type;
-from urlparse import parse_qs;
+from cgi import FieldStorage as read_request_vars;
 
 def _route(environ, start_response):
 	try:
@@ -59,7 +59,9 @@ def _provideAResource(itemLocation):
 def _executeAction(function, action, session):
 	method = session[Constants.HTTP_METHOD];
 	if method == Constants.HTTP_METHOD_GET:
-		vars = parse_qs(session[Constants.GET_REQUEST_CONTENT]);
+		vars = read_request_vars(fp=session[Constants.GET_REQUEST_CONTENT], environ=session, keep_blank_values=True);
+	elif method == Constants.HTTP_METHOD_POST:
+		vars = read_request_vars(fp=session[Constants.POST_REQUEST_CONTENT], environ=session, keep_blank_values=True);
 	else:
 		raise BadRequestException('Wrong method provided!');
 			
