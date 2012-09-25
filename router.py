@@ -71,11 +71,11 @@ def _executeAction(controllerName, action, session):
 	else:
 		raise BadRequestException('Wrong method provided!');
 	
-	controllerModule = imp.load_source(controllerName, Constants.CONTROLLERS_FOLDER + controllerName + ".py");
-	controller = getattr(controllerModule, controllerName)(params);
-	getattr(controller, action)();
-		
 	try:
+		controllerModule = imp.load_source(controllerName, Constants.CONTROLLERS_FOLDER + controllerName + ".py");
+		controller = getattr(controllerModule, controllerName)(params);
+		getattr(controller, action)();
+	
 		loader = FileSystemLoader(Constants.VIEWS_FOLDER + "/" + controllerName);
 		env = Environment(loader=loader);
 		template = env.select_template([action + '.html', action + '.xml', action + '.json']);
