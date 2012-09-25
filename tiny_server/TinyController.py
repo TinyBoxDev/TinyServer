@@ -10,18 +10,14 @@ Copyright (c) 2012. All rights reserved.
 import unittest
 
 
-class TinyController:
+class TinyController(object):
 	
-	data_bundle;
+	_paramsBundle = {};
 	
 	def __init__(self, vars):
-		self.data_bundle = vars;
-
-
-class TinyControllerTests(unittest.TestCase):
-	def setUp(self):
-		pass
-
-
-if __name__ == '__main__':
-	unittest.main()
+		self._paramsBundle = vars;
+	
+	def getDataBundle(self):
+		return self._paramsBundle;
+	
+	
