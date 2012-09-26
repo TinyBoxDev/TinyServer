@@ -83,9 +83,9 @@ Remember: for every action you can associate only one view. If in the folder the
 
 ### The Model
 
-Actually Tiny Server doesn't provide a smart method to add model. You can use, for instance, [SqlAlchemy](http://www.sqlalchemy.org/) to add data support. Look at `Developing` section to know how to give us some help.
+Actually Tiny Server doesn't provide a smart method to add model. You can use, for instance, [SqlAlchemy](http://www.sqlalchemy.org/) to add data support. Look at `Development` section to know how to give us some help.
 
-Developing
+Development
 ----------
 
 Tiny Server want to be a social application, Tiny Server want to be an "always in beta" app.
