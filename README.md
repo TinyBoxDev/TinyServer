@@ -10,6 +10,30 @@ Tiny Server is a very little application server based on the python's WSGI libs 
 
 It is based on the MVC and the "Convention over Configuration" patters: you have to write only the necessary.
 
+Let's start
+-----------
+
+To start using Tiny Server, simply clone the code in a folder using the command
+
+	git clone https://github.com/helloIAmPau/TinyServer.git
+
+The best way to install python dependancies, is to build a virtual environment into the root folder of the project. You can use `virtualenv` command into the root folder
+
+	virtual --distribute PythonEnv
+	source PythonEnv/bin/activate 
+
+Now you can install dependencies using pip
+
+	pip install Jinja2
+
+If you use foreman, you can run Tiny Server typing
+	
+	foreman start
+
+otherwise you ca use a more classical 
+	
+	python router.py
+
 The application structure
 -------------------------
 
@@ -60,3 +84,16 @@ Remember: for every action you can associate only one view. If in the folder the
 ### The Model
 
 Actually Tiny Server doesn't provide a smart method to add model. You can use, for instance, [SqlAlchemy](http://www.sqlalchemy.org/) to add data support. Look at `Developing` section to know how to give some help.
+
+Developing
+----------
+
+Tiny Server want to be a social application, Tiny Server want to be an "always in beta" app.
+Everyone can collaborates with Tiny Server project adding some code, proposing some ideas, testing the current version.. Every thing that comes in your head can be usefull to powerup this project. So we encurage you to fork this project ad give us a feedback. 
+Right now there are some opened issues:
+
+* Adding a smart method to manage models
+* Refactoring of the current version
+* Testing
+
+If someone want to collaborate.. can contact me at [boemianrapsodi@gmail.com](mailto:boemianrapsodi@gmail.com). Thanks for your support!
