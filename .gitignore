@@ -20,11 +20,14 @@ pip-log.txt
 .coverage
 .tox
 
-#Translations
+# Translations
 *.mo
 
-#Mr Developer
+# Mr Developer
 .mr.developer.cfg
 
-#Python Environment
+# Python Environment
 PythonEnv/*
+
+# Mac Garbage
+.DS_Store
