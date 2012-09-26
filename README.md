@@ -37,7 +37,7 @@ otherwise you ca use a more classical
 The application structure
 -------------------------
 
-As mentioned above, Tiny Server is based on the Model-View-Controller pattern. In this section you'll learn how to create this three components to build your own applications.
+As mentioned above, Tiny Server is based on the Model-View-Controller pattern. In this section you'll learn how to create this three components in order to build your own applications.
 
 ### The Controller
 
@@ -56,13 +56,13 @@ To call the `dosomething()` method you have to redirect your browser to
 
 	http://localhost:5000/test/dosomething
 
-Thats all! Smart, not you think?
+Thats all! Smart, don't you think so?
 
 ### The View
 
-And here comes the best! The add a view, simply create an `html` page or an `xml - json` file into `app/views/` using the conventional structure `class_name/method.(html|xml|json)`. At the end of the esecution of the controller, automatically the corresponding view where called and sent to the client. 
+And here comes the best! To add a view, simply create an `html` page or an `xml - json` file into `app/views/` using the structure `class_name/method.(html|xml|json)`. At the end of the esecution of the controller, automatically the corresponding view where called and sent to the client. 
 
-You can embed some python code using the `Jinja2` convention. Every class variable of the controller meybe evaluated into the view body:
+You can embed some python code using the `Jinja2` convention and read all the "class" variables of the controller:
 
 	<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 	<html lang="en">
@@ -75,7 +75,7 @@ You can embed some python code using the `Jinja2` convention. Every class variab
 	</body>
 	</html>
 
-Remember: for every action you can associate only one view. If in the folder there are more than one view, were applicated this priority convention:
+Remember: for every action can be associate only one view, so if in the folder there are more than one view, will loaded only one view in accordance with the following priority list:
 
 * action.html
 * action.xml
@@ -83,17 +83,21 @@ Remember: for every action you can associate only one view. If in the folder the
 
 ### The Model
 
-Actually Tiny Server doesn't provide a smart method to add model. You can use, for instance, [SqlAlchemy](http://www.sqlalchemy.org/) to add data support. Look at `Development` section to know how to give us some help.
+Actually Tiny Server doesn't provide a smart method to add models, but you can use, for instance, [SqlAlchemy](http://www.sqlalchemy.org/). Look at `Development` section to know how you can give us some help.
 
 Development
 ----------
 
-Tiny Server want to be a social application, Tiny Server want to be an "always in beta" app.
-Everyone can collaborates with Tiny Server project adding some code, proposing some ideas, testing the current version.. Every thing that comes in your head can be usefull to powerup this project. So we encurage you to fork this project ad give us a feedback. 
+Tiny Server want to be a social and an "always in beta" application.
+Everyone can collaborates with Tiny Server project adding some code, proposing some ideas, testing the current version.. Every thing that comes in your head, every minute that you can spend, can be useful to make this project bigger. So we encurage you to fork this code ad give us a feedback. 
 Right now there are some opened issues:
 
 * Adding a smart method to manage models
 * Refactoring of the current version
 * Testing
 
-If someone want to collaborate.. can contact me at [boemianrapsodi@gmail.com](mailto:boemianrapsodi@gmail.com). Thanks for your support!
+If someone want to collaborate.. can contact personally us by mail: 
+[Pasquale Boemio](mailto:boemianrapsodi@gmail.com) 
+[Antonio Bevilacqua](mailto:b3by.in.th3.sky@gmail.com)
+
+Thanks for your support!
