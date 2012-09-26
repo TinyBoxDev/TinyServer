@@ -17,7 +17,7 @@ As mentioned above, Tiny Server is based on the Model-View-Controller pattern. I
 
 ### The Controller
 
-To write a controller, simply you hate to create a python class into the `app/controllers` folder that extends TinyController. For example, look at this `test.py` class:
+To write a controller, simply you have to create a python class into the `app/controllers` folder that extends TinyController. For example, look at this `test.py` class:
 
 	#!/usr/bin/env python
 	# encoding: utf-8
